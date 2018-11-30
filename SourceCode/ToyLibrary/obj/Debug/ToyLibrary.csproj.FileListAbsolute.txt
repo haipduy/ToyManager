@@ -1,0 +1,6 @@
+D:\HOCTAP\FU\CN5\C#\CodeCSharp\Wpf\ToyManager\ToyLibrary\obj\Debug\ToyLibrary.csprojAssemblyReference.cache
+D:\HOCTAP\FU\CN5\C#\CodeCSharp\Wpf\ToyManager\ToyLibrary\obj\Debug\ToyLibrary.csproj.CoreCompileInputs.cache
+D:\HOCTAP\FU\CN5\C#\CodeCSharp\Wpf\ToyManager\ToyLibrary\bin\Debug\ToyLibrary.dll
+D:\HOCTAP\FU\CN5\C#\CodeCSharp\Wpf\ToyManager\ToyLibrary\bin\Debug\ToyLibrary.pdb
+D:\HOCTAP\FU\CN5\C#\CodeCSharp\Wpf\ToyManager\ToyLibrary\obj\Debug\ToyLibrary.dll
+D:\HOCTAP\FU\CN5\C#\CodeCSharp\Wpf\ToyManager\ToyLibrary\obj\Debug\ToyLibrary.pdb

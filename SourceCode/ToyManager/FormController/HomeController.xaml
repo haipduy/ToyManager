@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="ToyManager.FormController.HomeController"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToyManager.FormController"
+             mc:Ignorable="d" 
+             Height="690" Width="auto">
+    <Grid Margin="5 0 20 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource MaterialDesignDisplay3TextBlock}">
+                        Welcome to Toy Management !</TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"></ColumnDefinition>
+                <ColumnDefinition Width="350"></ColumnDefinition>
+                <ColumnDefinition Width="350"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <materialDesign:Card Width="200">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="140" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="C:\Users\Admin\Desktop\ToyManagement_SE1270_2\SourceCode\ToyManager\image\hai.jpg" Height="140" Width="196" Stretch="UniformToFill" />
+                        <Button  Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,16,0" Grid.RowSpan="2">
+                            <materialDesign:PackIcon Kind="AlertOutline" />
+                        </Button>
+                        <StackPanel Grid.Row="1"  Margin="8 24 8 0">
+                            <TextBlock FontWeight="Bold"> Pham Duy Hai</TextBlock>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                            <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True">
+                                <materialDesign:PackIcon Kind="ShareVariant" />
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True">
+                                <materialDesign:PackIcon Kind="Heart" />
+                            </Button>
+                            <materialDesign:PopupBox Padding="2 0 2 0">
+                                <StackPanel>
+                                    <Button Content="More" />
+                                    <Button Content="Options" />
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+            <Grid Grid.Column="1">
+                <materialDesign:Card Width="200">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="140" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="C:\Users\Admin\Desktop\ToyManagement_SE1270_2\SourceCode\ToyManager\image\duy.jpg" Height="140" Width="196" Stretch="UniformToFill" />
+                        <Button  Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,16,0" Grid.RowSpan="2">
+                            <materialDesign:PackIcon Kind="AlertOutline" />
+                        </Button>
+                        <StackPanel Grid.Row="1"  Margin="8 24 8 0">
+                            <TextBlock FontWeight="Bold"> Phung Ngoc Khuong Duy</TextBlock>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                            <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True">
+                                <materialDesign:PackIcon Kind="ShareVariant" />
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True">
+                                <materialDesign:PackIcon Kind="Heart" />
+                            </Button>
+                            <materialDesign:PopupBox Padding="2 0 2 0">
+                                <StackPanel>
+                                    <Button Content="More" />
+                                    <Button Content="Options" />
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+            <Grid Grid.Column="2">
+                <materialDesign:Card Width="200">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="140" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="C:\Users\Admin\Desktop\ToyManagement_SE1270_2\SourceCode\ToyManager\image\mi.jpg" Height="140" Width="196" Stretch="UniformToFill" />
+                        <Button  Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,16,0" Grid.RowSpan="2">
+                            <materialDesign:PackIcon Kind="AlertOutline" />
+                        </Button>
+                        <StackPanel Grid.Row="1"  Margin="8 24 8 0">
+                            <TextBlock FontWeight="Bold"> Tran The Mi</TextBlock>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                            <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True">
+                                <materialDesign:PackIcon Kind="ShareVariant" />
+                            </Button>
+                            <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True">
+                                <materialDesign:PackIcon Kind="Heart" />
+                            </Button>
+                            <materialDesign:PopupBox Padding="2 0 2 0">
+                                <StackPanel>
+                                    <Button Content="More" />
+                                    <Button Content="Options" />
+                                </StackPanel>
+                            </materialDesign:PopupBox>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

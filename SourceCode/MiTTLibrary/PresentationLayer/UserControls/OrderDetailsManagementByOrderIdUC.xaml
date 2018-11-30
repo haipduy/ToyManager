@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="MiTTLibrary.PresentationLayer.UserControls.OrderDetailsManagementByOrderIdUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MiTTLibrary.PresentationLayer.UserControls"
+            mc:Ignorable="d" Width="auto" ScrollViewer.HorizontalScrollBarVisibility="Visible" >
+    <Grid Margin="0,0,0,0" UseLayoutRounding="False" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+        <StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="5,1,5,1">
+                <Label Name="headLabel" Margin="20,1,5,1" />
+                <Button Name="reloadButton" Click="reloadButton_Click" Content="ReLoad" Margin="1,1,1,1" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+                <Button Name="saveButton" Click="saveButton_Click" Content="Save" Margin="1,1,1,1" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75"/>
+                <Button Name="deleteButton" Click="deleteButton_Click" Content="Delete" Margin="1,1,1,1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            </StackPanel>
+            <StackPanel Margin="5,1,5,1" >
+                <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" CellEditEnding="dataGrid_CellEditEnding" AutoGenerateColumns="False" Height="160" VerticalAlignment="Top"  Margin="5,1,5,1" InitializingNewItem="dataGrid_InitializingNewItem" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding OrderId}" Header="Order Id" IsReadOnly="True"/>
+                        <DataGridComboBoxColumn x:Name="productIdComboBox" Header="Product Id"  SelectedItemBinding="{Binding ProductId}" />
+                        <DataGridTextColumn Binding="{Binding Quantity}" Header="Quantity" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

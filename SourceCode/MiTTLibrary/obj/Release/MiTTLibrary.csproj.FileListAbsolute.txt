@@ -1,0 +1,15 @@
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\bin\Release\MiTTLibrary.dll
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\bin\Release\MiTTLibrary.pdb
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\PresentationLayer\UserControls\OrderDetailsManagementByOrderIdUC.g.cs
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\PresentationLayer\UserControls\OrderDetailsViewUC.g.cs
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\PresentationLayer\UserControls\OrderManagementUC.g.cs
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary_MarkupCompile.cache
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary_MarkupCompile.lref
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\PresentationLayer\UserControls\OrderDetailsManagementByOrderIdUC.baml
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\PresentationLayer\UserControls\OrderDetailsViewUC.baml
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\PresentationLayer\UserControls\OrderManagementUC.baml
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary.g.resources
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary.csproj.CoreCompileInputs.cache
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary.dll
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary.pdb
+C:\Users\MyPC\source\repos\app1\MiTTLibrary\obj\Release\MiTTLibrary.csprojAssemblyReference.cache

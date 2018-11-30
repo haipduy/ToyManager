@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="ToyManager.FormController.SupllierContoller"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToyManager.FormController"
+             mc:Ignorable="d" 
+              Height="auto" Width="auto">
+    <Grid Margin="5 0 20 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="20 17 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="130"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button x:Name="btnAddSup" Click="btnAddSup_Click"
+                    Width="125" Height="40" 
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Background="#FF5F93FF" Foreground="White"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                    materialDesign:RippleAssist.Feedback="#DD000000" BorderBrush="{x:Null}" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="AccountMultiplePlus" Margin="0 0 5 0"  Width="24" Height="24"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBlock  Text="Add" FontSize="13" Margin="0 3 0 0"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Button>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button  x:Name="btnUpdateSup" Click="btnUpdateSup_Click"
+                    Width="125" Height="40" 
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Background="#FF5F93FF" Foreground="White"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                    materialDesign:RippleAssist.Feedback="#DD000000" BorderBrush="{x:Null}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="AccountMultiplePlus" Margin="0 0 5 0"  Width="24" Height="24"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBlock Text="Update" FontSize="13" Margin="0 3 0 0"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Button>
+            </Grid>
+            
+        </Grid>
+        <Grid Grid.Row="1" Margin="10 20 0 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBox x:Name="TxtSupID" 
+                             Text="{Binding SelectedItem.SupplierID,ElementName=dgSupllier}"
+                    materialDesign:HintAssist.Hint="Supplier ID" Margin="15,5,0,5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="TxtSubName"
+                             Text="{Binding SelectedItem.SupplierName,ElementName=dgSupllier}"
+                    materialDesign:HintAssist.Hint="Supplier Name" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBox  x:Name="TxtSubAddress"
+                             Text="{Binding SelectedItem.AddressItem,ElementName=dgSupllier}"
+                    materialDesign:HintAssist.Hint="Address" Margin="15,5,0,5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox  x:Name="TxtSubPhone"
+                             Text="{Binding SelectedItem.Phone,ElementName=dgSupllier}"
+                    materialDesign:HintAssist.Hint="Phone" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Height="auto" Margin="20,20,0,10">
+            <DataGrid x:Name="dgSupllier" ItemsSource="{Binding}" 
+                  AutoGenerateColumns="False" CanUserSortColumns="True" 
+                  HorizontalAlignment="Left" CanUserAddRows="True" IsReadOnly="True"
+                  Height="388" Margin="0,15,0,0" Width="1190" Grid.ColumnSpan="3">
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Binding="{Binding SupplierID}" Width="200" Header="ID" />
+                    <DataGridTextColumn  Binding="{Binding SupplierName}" Width="300" Header="Full Name" />
+                    <DataGridTextColumn  Binding="{Binding AddressItem}" Width="300" Header="Full Name" />
+                    <DataGridTextColumn  Binding="{Binding Phone}" Width="300" Header="Full Name" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

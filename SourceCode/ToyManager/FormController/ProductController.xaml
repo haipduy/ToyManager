@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="ToyManager.FormController.ProductController"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ToyManager.FormController"
+             mc:Ignorable="d" 
+             Height="auto" Width="auto">
+    <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="5 17 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="130"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button x:Name="btnAdd" Click="btnAdd_Click"
+                    Width="125" Height="40" 
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Background="#FF5F93FF" Foreground="White"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                    materialDesign:RippleAssist.Feedback="#DD000000" BorderBrush="{x:Null}" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="AccountMultiplePlus" Margin="0 0 5 0"  Width="24" Height="24"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBlock Text="Add" FontSize="13" Margin="0 3 0 0"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Button>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Button  x:Name="btnUpdate" Click="btnUpdate_Click"
+                    Width="125" Height="40" 
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Background="#FF5F93FF" Foreground="White"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                    materialDesign:RippleAssist.Feedback="#DD000000" BorderBrush="{x:Null}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="AccountMultiplePlus" Margin="0 0 5 0"  Width="24" Height="24"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBlock Text="Update" FontSize="13" Margin="0 3 0 0"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Button>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button   x:Name="btnRemove" Click="btnRemove_Click"
+                    Width="127" Height="40" 
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Background="#FF5F93FF" Foreground="White"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                    materialDesign:RippleAssist.Feedback="#DD000000" BorderBrush="{x:Null}" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <materialDesign:PackIcon Kind="AccountMultiplePlus" Margin="0 0 5 0"  Width="24" Height="24"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBlock Text="Remove" FontSize="13" Margin="0 3 0 0"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0 10 0 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBox x:Name="TxtProductId"
+                             IsReadOnly="True"
+                             Text="{Binding SelectedItem.ID,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Product ID" Margin="15,5,0,5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="TxtProductname"  IsReadOnly="True"
+                             Text="{Binding SelectedItem.Name,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Product Name" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+                <Grid Grid.Column="2">
+                    <TextBox x:Name="TxtPrice"  IsReadOnly="True"
+                             Text="{Binding SelectedItem.Price,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Price" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+                <Grid Grid.Column="3">
+                    <TextBox x:Name="TxtDescription" IsReadOnly="True"
+                             Text="{Binding SelectedItem.Description,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Description" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="76*"/>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="193*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,299,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="CbCategoryname" IsReadOnly="True"
+                             Text="{Binding SelectedItem.CategoryName,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Category Name" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" Grid.ColumnSpan="2" />
+                </Grid>
+                <Grid Grid.Column="1" Grid.ColumnSpan="2" Margin="1,0,298,0">
+                    <TextBox x:Name="CbSupliiername" IsReadOnly="True"
+                             Text="{Binding SelectedItem.SupplierName,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Supllier Name" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+                <Grid Grid.Column="2" Grid.ColumnSpan="2" Margin="2,0,73,0">
+                    <TextBox x:Name="TxtQuantity"  IsReadOnly="True"
+                             Text="{Binding SelectedItem.Quantity,ElementName=dgProduct}"
+                    materialDesign:HintAssist.Hint="Quantity" Margin="15 5 15 5"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="20 0 0 0">
+                <TextBox x:Name="TxtFilter" materialDesign:HintAssist.Hint="Search By name of Product" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            </Grid>
+            <Grid Grid.Column="1" Margin="20 0 0 0">
+                <Button x:Name="btnSearch" Click="btnSearch_Click"  Style="{StaticResource MaterialDesignRaisedButton}"  Width="150" ToolTip="Resource name: MaterialDesignRaisedButton" Margin="10,18,21,0">Search</Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="37*"/>
+                <ColumnDefinition Width="163*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="dgProduct" ItemsSource="{Binding}"  
+                  AutoGenerateColumns="False" CanUserSortColumns="True"
+                  HorizontalAlignment="Left" CanUserAddRows="True" IsReadOnly="True"
+                  Height="388" Margin="10,12,0,0" VerticalAlignment="Top" Width="1190" Grid.ColumnSpan="2">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}" Width="100" Header="Product ID"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Width="200" Header="Product Name" />
+                    <DataGridTextColumn Binding="{Binding Price}"  Width="100" Header="Price"/>
+                    <DataGridTextColumn Binding="{Binding Quantity}"  Width="100" Header="Quantity"/>
+                    <DataGridTextColumn Binding="{Binding CategoryName}"  Width="200" Header="Category"/>
+                    <DataGridTextColumn Binding="{Binding SupplierName}"  Width="200" Header="Supplier Name"/>
+                    <DataGridTextColumn Binding="{Binding Description}"  Width="200" Header="Description"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>
